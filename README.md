@@ -1,43 +1,92 @@
-Meal Reminder App
-A Python application that delivers personalized meal and pre-fast snack reminders using macOS notifications and voice alerts, ideal for maintaining a structured diet.
-Features
 
-Displays daily meal plans based on the current day.
-Sends system notifications and voice reminders for upcoming meals.
-Customizable meal schedules stored in a dictionary.
-Identifies the next meal based on the current time.
+````markdown
+# 🍽️ Jarvis Meal Reminder Assistant
 
-Tech Stack
+A personal meal reminder assistant built in Python to help maintain a disciplined fitness and fasting meal routine. It integrates with macOS to deliver **desktop notifications** and **voice alerts** based on a weekly meal plan.
 
-Python 3.6+
-Modules: datetime, subprocess
-macOS-specific: osascript for notifications, say for voice alerts
+---
 
-Installation
+## 🔧 Features
 
-Clone the repository:git clone https://github.com/your-username/meal-reminder-app.git
-cd meal-reminder-app
+- ⏰ Automatically reminds you of upcoming meals
+- 🔔 Displays macOS system notifications via `osascript`
+- 🗣️ Speaks reminders using the macOS `say` command (Voice: Daniel)
+- 📅 Customizable weekly meal schedule (pre/post-workout, lunch, dinner, snacks)
+- 🧠 Special voice alert for pre-fast snacks
+- 📝 Easily extendable to track meal logs or integrate with other platforms (Slack, WhatsApp, etc.)
 
+---
 
-Ensure Python 3.6+ is installed.
-Run the script:python meal_reminder.py
+## 🖥️ Requirements
 
+- macOS (required for `osascript` and `say` commands)
+- Python 3.x (no external libraries needed)
 
+---
 
-Usage
+## 🚀 How to Use
 
-Runs once to check the current day and time, then alerts for the next scheduled meal or pre-fast snack.
-Example output for Friday at 7:17 PM:Today is Friday
-Current time is 07:17 PM
-Good evening Vivek sir! this is jarvis. It's time for your pre-fast snack.
+1. Clone the repository:
 
+   ```bash
+   git clone https://github.com/YourUsername/meal-reminder-assistant.git
+   cd meal-reminder-assistant
+````
 
+2. Run the script manually:
 
-Future Improvements
+   ```bash
+   python3 meal_reminder.py
+   ```
 
-Add cross-platform notifications (Windows/Linux).
-Enable continuous scheduling for real-time reminders.
-Support external meal plan configuration (e.g., JSON).
+3. (Optional) Automate with `cron` to check every 15 minutes:
 
-License
-MIT License
+   ```bash
+   crontab -e
+   ```
+
+   Add this line to the bottom:
+
+   ```bash
+   */15 * * * * /usr/bin/python3 /path/to/meal_reminder.py
+   ```
+
+---
+
+## 🧠 Customization
+
+* Change the `meal_plan` dictionary in `meal_reminder.py` to reflect your own schedule and diet.
+* Modify the `remind_meal()` and `remind_pre_fast_snack()` functions to change how notifications and voice messages are handled.
+* Add meal logging, Slack alerts, or WhatsApp integrations for fun enhancements.
+
+---
+
+## 🗂️ Project Structure
+
+```bash
+meal-reminder-assistant/
+├── meal_reminder.py       # Main script
+├── README.md              # Project documentation
+├── .gitignore             # (Optional) Ignore logs
+└── meal_log.txt           # (Optional) Auto-generated if logging is added
+```
+
+---
+
+## 🧑‍💻 Author
+
+**Vivek Harsh**
+[🔗 LinkedIn](https://www.linkedin.com/in/vivekharshcodecraft/) | [🌐 Portfolio](https://github.com/HarshTechStack)
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License. Feel free to use, fork, and modify.
+
+---
+
+💬 *"Good evening Vivek sir! This is Jarvis. It's time for your pre-fast snack."*
+
+```
+```
