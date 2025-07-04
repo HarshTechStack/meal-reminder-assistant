@@ -67,8 +67,7 @@ A personal meal reminder assistant built in Python to help maintain a discipline
 meal-reminder-assistant/
 ├── meal_reminder.py       # Main script
 ├── README.md              # Project documentation
-├── .gitignore             # (Optional) Ignore logs
-└── meal_log.txt           # (Optional) Auto-generated if logging is added
+
 ```
 
 ---
