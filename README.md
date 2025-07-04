@@ -1,5 +1,5 @@
 
-````markdown
+
 # 🍽️ Jarvis Meal Reminder Assistant
 
 A personal meal reminder assistant built in Python to help maintain a disciplined fitness and fasting meal routine. It integrates with macOS to deliver **desktop notifications** and **voice alerts** based on a weekly meal plan.
